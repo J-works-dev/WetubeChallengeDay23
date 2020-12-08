@@ -7,6 +7,6 @@ html(lang="en")
     title #{pageTitle}
   body
     h1=pageTitle
-    form(action="/", method="post")
-      input(type="file", name="file", placeholder="Choose File", required)
+    form(action="/", method="post", enctype="multipart/for-data")
+      input(type="file", name="file", placeholder="Choose File", required, accept=".txt, .rtf")
       input(type="submit", value="Convert")

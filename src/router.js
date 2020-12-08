@@ -8,3 +8,5 @@ const upload = multer();
 router.get("/", home);
 router.post("/", upload.single("file"), postFile);
 router.get("/read", read);
+
+export default router;
