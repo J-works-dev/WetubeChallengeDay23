@@ -5,8 +5,10 @@ export const home = (req, res) => {
 };
 
 export const postFile = (req, res) => {
-  // const { file } = req;
-  fs.readFile(req.file, "utf8", function (err, data) {
+  const {
+    file: { path }
+  } = req;
+  fs.readFile(path, "utf8", function (err, data) {
     if (err) {
       console.log("error: ", err);
     }
